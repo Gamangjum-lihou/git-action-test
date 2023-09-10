@@ -1,0 +1,14 @@
+# enable labeler on issues, prs, or both.
+enable:
+  issues: true
+
+labels:
+  '철원':
+    include:
+      - '\b철원\b'
+  '현호':
+    include:
+      - '\b현호\b'
+  '보리':
+    include:
+      - '\b보리\b'
