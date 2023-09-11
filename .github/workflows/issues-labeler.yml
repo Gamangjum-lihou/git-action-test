@@ -8,14 +8,6 @@ on:
 
 # 트리거되었을 때 실행될 job 작성
 jobs:
-  labeler:
-    runs-on: ubuntu-latest
-    # 리파지토리에 대한 권한 설정
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
   issue_commented:
     # This job only runs for issue comments
     name: apply-label
