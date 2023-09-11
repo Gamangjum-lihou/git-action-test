@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add deploy comment # https://stackoverflow.com/questions/58066966/commenting-a-pull-request-in-a-github-action
-        if: contains(github.event.comment.body, '철원')
+        if: contains(github.event.comment.user, 'ryan-dia')
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
