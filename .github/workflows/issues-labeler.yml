@@ -9,7 +9,7 @@ on:
 # 트리거되었을 때 실행될 job 작성
 jobs:
   issue_commented:
-    if: contains(github.event.comment.user.login, 'ryan-dia'||'SWARVY')
+    if: contains(github.event.comment.user.login, 'ryan-dia'||'Caffhheine')
     name: apply-label
     runs-on: ubuntu-latest
     steps:
@@ -27,7 +27,7 @@ jobs:
             })
 
       - name: Add Label - 현호
-        if: github.event.comment.user.login == 'SWARVY'
+        if: github.event.comment.user.login == 'Caffhheine'
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
