@@ -24,8 +24,11 @@ jobs:
               'Bori-github': '보리',
               'hannaax': '한나'
             };
-            const userLogin = context.payload.comment.user.login;
+            const userLogin = github.event.comment.user.login;
             const labelToAdd = userLabelMap[userLogin];
+
+            console.log(userLogin)
+            console.log(labelToAdd)
 
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
