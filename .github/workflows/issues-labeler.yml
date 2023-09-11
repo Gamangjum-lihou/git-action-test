@@ -9,11 +9,11 @@ on:
 # 트리거되었을 때 실행될 job 작성
 jobs:
   issue_commented:
-    if: contains(github.event.comment.user.login, 'ryan-dia'||'민수'||'철수'||'영철')
+    if: contains(github.event.comment.user.login, 'ryan-dia'||'SWARVY')
     name: apply-label
     runs-on: ubuntu-latest
     steps:
-      - name: Add deploy comment # https://stackoverflow.com/questions/58066966/commenting-a-pull-request-in-a-github-action
+      - name: Add Label - 철원
         if: github.event.comment.user.login == 'ryan-dia'
         uses: actions/github-script@v6
         with:
@@ -24,4 +24,17 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ['철원']
+            })
+
+      - name: Add Label - 현호
+        if: github.event.comment.user.login == 'SWARVY'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['현호']
             })
