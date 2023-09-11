@@ -13,6 +13,9 @@ jobs:
     # 리파지토리에 대한 권한 설정
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Check Labels
         id: labeler
         uses: jimschubert/labeler-action@v2
