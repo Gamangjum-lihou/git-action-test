@@ -22,8 +22,8 @@ jobs:
               'Ryan-Dia': '철원',
               'SWARVY': '현호',
               'Bori-github': '보리',
-              'limvik': '성국'
-              'hannaax': '한나'
+              'limvik': '성국',
+              'hannaax': '한나',
               'BaxDailyGit': '승진'
             };
             const userLogin = context.payload.comment.user.login;
