@@ -19,7 +19,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const userLabelMap = {
-              'ryan-dia': '철원',
+              'Ryan-Dia': '철원',
               'SWARVY': '현호',
               'Bori-github': '보리',
               'hannaax': '한나'
